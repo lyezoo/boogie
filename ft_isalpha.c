@@ -1,19 +1,8 @@
 #include "lh_proto.h"
 
-int		ft_isalpha(char *str)
+int		ft_isalpha(int c)
 {
-	while (*str != '\0')
-	{
-		if (*str >= 'a' && *str <= 'z')
-			str++;
-		else
-			return (0);
-	}
-	return (1);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%i\n", isalpha());
-	return 0;
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
 }

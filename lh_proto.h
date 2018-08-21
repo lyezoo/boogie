@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void			ft_putchar(char c);
 void			ft_putstr(char *str);
@@ -23,6 +24,10 @@ char			*ft_strstr(char *str, char *to_find);
 char			*ft_strnstr(char *str, char *to_find, unsigned int n);
 char			*ft_strncpy(char *dest, char *src, unsigned int n);
 char			*ft_strcpy(char *dest, char *src);
-int				ft_isalpha(char *str);
+int				ft_isalpha(int c);
+int				ft_isalnum(int c);
+int				ft_isdigit(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
 
 #endif

@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <strings.h>
 
 void			ft_putchar(char c);
 void			ft_putstr(char *str);
@@ -29,5 +30,17 @@ int				ft_isalnum(int c);
 int				ft_isdigit(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
+char			*ft_strchr(char *s, int c);
+char			*ft_strrchr(char *s, int c);
+void			ft_bzero(void *s, size_t n);
+
+//memset();
+//memcpy();
+//memccpy();
+//memmove();
+//memchr();
+//memcmp();
 
 #endif

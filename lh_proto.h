@@ -35,9 +35,10 @@ int				ft_tolower(int c);
 char			*ft_strchr(char *s, int c);
 char			*ft_strrchr(char *s, int c);
 void			ft_bzero(void *s, size_t n);
+void			*ft_memset(void *s, int c, size_t n);
+void			*ft_memcpy(void *dest, void *src, size_t n);
 
-//memset();
-//memcpy();
+
 //memccpy();
 //memmove();
 //memchr();

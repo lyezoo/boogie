@@ -5,8 +5,11 @@ int		main(int ac, char **av)
 	char *s1 = av[1];
 	char *ss1 = av[1];
 	char *s2 = av[2];
+	char *av1 = av[1];
 	void *bz = av[1];
 	int zer = atoi(av[2]);
+	void *set = av[1];
+	void *ft_set = av[1];
 
 	(void)ac;
 //	printf("la vraie  : %s\n", strnstr(ss1, s2, 5));
@@ -68,18 +71,20 @@ int		main(int ac, char **av)
 //	printf("la vraie  : %s\n", strrchr(av[1], av[2][0]));
 //	printf("la mienne : %s\n", ft_strrchr(av[1], av[2][0]));
 
-	bzero(bz, atoi(av[2]));
-	printf("la vraie  : %s\n", bz);
-	printf("l adresse n-1 : %s\n", &bz[zer - 2]);
-	printf("l adresse n : %s\n", &bz[zer - 1]);
-	printf("l adresse n+1 : %s\n", &bz[zer]);
-	ft_bzero(av[1], atoi(av[2]));
-	printf("\n\nla mienne : %s\n", bz);
-	printf("l adresse n-1 : %s\n", &bz[zer - 2]);
-	printf("l adresse n : %s\n", &bz[zer - 1]);
-	printf("mon adresse n+1 : %s\n", &bz[zer]);
+//	bzero(bz, atoi(av[2]));
+//	printf("la vraie  : %s\n", bz);
+//	printf("a l'adresse 0 : %s\n", &bz[0]);
+//	printf("a l'adresse n : %s\n", &bz[zer - 1]);
+//	printf("a l'adresse n+1 : %s\n", &bz[zer]);
+//	ft_bzero(av[1], atoi(av[2]));
+//	printf("la mienne : %s\n", av[1]);
+//	printf("a l'adresse 0 : %s\n", &av[1][0]);
+//	printf("a l'adresse n : %s\n", &av[1][zer - 1]);
+//	printf("a l'adresse n+1 : %s\n", &av[1][zer]);
 
-//memset();
+	printf("la vraie  : %s\n", memset(set, atoi(av[2]), (size_t)atoi(av[3])));
+	printf("la mienne : %s\n", ft_memset(ft_set, atoi(av[2]), (size_t)atoi(av[3])));
+
 //memcpy();
 //memccpy();
 //memmove();

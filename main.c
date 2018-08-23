@@ -10,6 +10,10 @@ int		main(int ac, char **av)
 	int zer = atoi(av[2]);
 	void *set = av[1];
 	void *ft_set = av[1];
+	void *dest1 = av[1];
+	void *ft_dest1 = av[1];
+	void *src1 = av[2];
+	void *ft_src1 = av[2];
 
 	(void)ac;
 //	printf("la vraie  : %s\n", strnstr(ss1, s2, 5));
@@ -36,8 +40,8 @@ int		main(int ac, char **av)
 //printf("la vraie  : %s\n", strstr(ss1, s2, 5));
 //	printf("la mienne : %s\n", ft_strstr(s1, s2, 5));
 //
-//printf("la vraie  : %s\n", strncmp(ss1, s2, 5));
-//	printf("la mienne : %s\n", ft_strncmp(s1, s2, 5));
+//	printf("la vraie  : %d\n", strncmp(ss1, s2, atoi(av[3])));
+//	printf("la mienne : %d\n", ft_strncmp(s1, s2, atoi(av[3])));
 //
 //printf("la vraie  : %s\n", atoi(ss1, s2, 5));
 //	printf("la mienne : %s\n", ft_atoi(s1, s2, 5));
@@ -82,14 +86,23 @@ int		main(int ac, char **av)
 //	printf("a l'adresse n : %s\n", &av[1][zer - 1]);
 //	printf("a l'adresse n+1 : %s\n", &av[1][zer]);
 
-	printf("la vraie  : %s\n", memset(set, atoi(av[2]), (size_t)atoi(av[3])));
-	printf("la mienne : %s\n", ft_memset(ft_set, atoi(av[2]), (size_t)atoi(av[3])));
+//	printf("la vraie  : %s\n", memset(set, atoi(av[2]), (size_t)atoi(av[3])));
+//	printf("la mienne : %s\n", ft_memset(ft_set, atoi(av[2]), (size_t)atoi(av[3])));
 
-//memcpy();
-//memccpy();
-//memmove();
-//memchr();
-//memcmp();
+	printf("la vraie  : %s\n", memcpy(dest1, src1, atoi(av[3])));
+	printf("la mienne : %s\n", ft_memcpy(ft_dest1, ft_src1, atoi(av[3])));
+
+//	printf("la vraie  : %p\n", memccpy(dest1, src1, atoi(av[3]), atoi(av[4])));
+//	printf("la mienne : %p\n", ft_memccpy(ft_dest1, ft_src1, atoi(av[3]), atoi(av[4])));
+
+//	printf("la vraie  : %d\n", memcmp(dest1, src1, atoi(av[3])));
+//	printf("la mienne : %d\n", ft_memcmp(ft_dest1, ft_src1, atoi(av[3])));
+
+//	printf("la vraie  : %d\n", memchr((void)av[1], atoi(av[2]), atoi(av[3])));
+//	printf("la mienne : %d\n", ft_memchr((void)av[1], atoi(av[2]), atoi(av[3])));
+
+//	printf("la vraie  : %d\n", memmove(dest1, src1, atoi(av[3])));
+//	printf("la mienne : %d\n", ft_memmove(ft_dest1, ft_src1, atoi(av[3])));
 
 	return (0);
 }

@@ -9,6 +9,7 @@
 #include <strings.h>
 
 void			ft_putchar(char c);
+void			ft_putnbr(int n);
 void			ft_putstr(char *str);
 int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
@@ -41,5 +42,7 @@ void			*ft_memccpy(void *dest, void *src, int c, size_t n);
 int				ft_memcmp(void *dest, void *src, size_t n);
 void			*ft_memchr(void *s, int c, size_t n);
 void			*ft_memmove(void *dest, void *src, size_t n);
+char			*ft_itoa(int n);
+
 
 #endif

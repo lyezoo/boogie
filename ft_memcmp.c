@@ -41,14 +41,20 @@ int		ftt_memcmp(void *dest, void *src, size_t n)
 //	write(1 , "\n", 1);
 //	printf("dest : %d\n", (int)dest);
 //	printf("src  : %d\n", (int)src);
-//	if ((int)*dest != (int)*src)
-//	{
-//		return ((int)(*dest) - (int)(*src));
-//	}
+	char *t;
+	char *g;
+
+
+	t = (char*)dest;
+	g = (char*)src;
+	if (t != g)
+	{
+		return (t - g);
+	}
 	if (n > 0)
 	{
-		write(1 , &dest, 1);
-		write(1 , &src, 1);
+//		write(1 , &dest, 1);
+//		write(1 , &src, 1);
 		ft_memcmp(++dest, ++src, n - 1);
 	}
 	return (0);

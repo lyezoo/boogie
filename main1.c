@@ -16,8 +16,8 @@ int		main(int ac, char **av)
 	void *ft_src1 = av[2];
 
 	(void)ac;
-//	printf("la vraie  : %s\n", strnstr(ss1, s2, 5));
-//	printf("la mienne : %s\n", ft_strnstr(s1, s2, 5));
+	printf("la vraie  : %s\n", strnstr(ss1, s2, atoi(av[3])));
+	printf("la mienne : %s\n", ft_strnstr(s1, s2, atoi(av[3])));
 //
 //printf("la vraie  : %s\n", strncat(ss1, s2, 5));
 //	printf("la mienne : %s\n", ft_strncat(s1, s2, 5));
@@ -102,8 +102,8 @@ int		main(int ac, char **av)
 //	printf("la vraie  : %s\n", memchr(av[1], atoi(av[2]), atoi(av[3])));
 //	printf("la mienne : %s\n", ft_memchr(av[1], atoi(av[2]), atoi(av[3])));
 
-	printf("la vraie  : %s\n", memmove(dest1, src1, atoi(av[3])));
-	printf("la mienne : %s\n", ft_memmove(ft_dest1, ft_src1, atoi(av[3])));
+//	printf("la vraie  : %s\n", memmove(dest1, src1, atoi(av[3])));
+//	printf("la mienne : %s\n", ft_memmove(ft_dest1, ft_src1, atoi(av[3])));
 
 	return (0);
 }

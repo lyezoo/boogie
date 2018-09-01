@@ -14,11 +14,9 @@ void	*ft_memmove(void *dest, void *src, size_t len)
 	dest = &tmp_dest;
 	while (i < len)
 	{
+		t = 7;
 		tmp_dest[i] = tmp_src[i];
 		i++;
 	}
-//	printf("dest  : %s\n", dest);
-	printf("tmp-dest : %s\n", tmp_dest);
-	printf("dest : %s\n", dest);
 	return (dest);
 }

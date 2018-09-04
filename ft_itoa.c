@@ -1,14 +1,5 @@
 #include "lh_proto.h"
 
-int		lim_neg(int n)
-{
-	int i;
-
-	i = 0;
-	
-	return (n);
-}
-
 int		ten_pow(int n)
 {
 	int pow_ten;
@@ -40,21 +31,23 @@ char	*ft_itoa(int n)
 	char *str;
 	int i;
 	int pow_ten;
+	long nb;
 
 	str = NULL;
 	i = 0;
-	pow_ten = ten_pow(n);
-	if (!(str = (char *)malloc(sizeof(char) * len_n(n))))
+	nb = n;
+	pow_ten = ten_pow(nb);
+	if (!(str = (char *)malloc(sizeof(char) * len_n(nb))))
 		return (NULL);
-	if (n < 0)
+	if (nb < 0)
 	{
 		str[i++] = '-';
-		n = -n;
+		nb = -nb;
 	}
 	while (pow_ten > 0)
 	{
-		str[i++] = (n / pow_ten) + '0';
-		n = n % pow_ten;
+		str[i++] = (nb / pow_ten) + '0';
+		nb = nb % pow_ten;
 		pow_ten /= 10;
 	}
 	str[i] = '\0';

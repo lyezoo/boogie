@@ -67,5 +67,13 @@ int		main(int ac, char **av)
 
 //	ft_putendl(av[1]);
 
+//	ft_putchar_fd(av[1][0]);
+
+//	ft_putstr_fd(av[1]);
+
+//	ft_putendl_fd(av[1]);
+
+//	ft_putnbr_fd(atoi(av[1]));
+
 	return (0);
 }

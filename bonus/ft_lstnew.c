@@ -1,17 +1,20 @@
 #include "lh_proto.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *maillon;
+	int		i;
+	t_list	*maillon;
 
+	i = 0;
+	maillon = NULL;
 	if (!(maillon = (t_list *)malloc(sizeof(tlist) * content_size)))
 		return (NULL);
-	if (!*content)
+	if (!(char*)content)
 	{
-		maillon->content_size = 0;
-		maillon->content = NULL;
+		maillon->content_size[i] = content_size;
+		maillon->content[i] = *content;
+		content++;
+		i++;
 	}
-	maillon->content_size = *content_size;
-	maillon->content = *content;
 	return (maillon);
 }

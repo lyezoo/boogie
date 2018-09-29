@@ -28,11 +28,12 @@ int		main(int ac, char **av)
 //		i++;
 //	}
 
-//	while (ft_split_whitespaces(av[1])[i])
-//	{
-//		ft_putstr(ft_split_whitespaces(av[1])[i++]);
-//		ft_putchar('\n');
-//	}
+	sd = ft_split_whitespaces(av[1]);
+	while (sd[i])
+	{
+		ft_putstr(sd[i++]);
+		ft_putchar('\n');
+	}
 
 //	sd = ft_split_whitespaces(av[1]);
 //	printf("avant del : %s\n", *sd);

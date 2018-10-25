@@ -7,6 +7,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	str = NULL;
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 		i++;
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))

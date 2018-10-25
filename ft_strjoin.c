@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	x = 0;
 	str = NULL;
+	if (!s1 || !s2)
+		return (NULL);
 	if (!(str = (char *)malloc(sizeof(char) * (cunt(s1) + cunt(s2)))))
 		return (NULL);
 	while (s1[i])

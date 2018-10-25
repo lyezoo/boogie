@@ -34,8 +34,10 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	x = 0;
-	num = count(s);
 	str = NULL;
+	if (!s)
+		return (NULL);
+	num = count(s);
 	if (!(str = (char *)malloc(sizeof(char) * num + 1)))
 		return (NULL);
 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')

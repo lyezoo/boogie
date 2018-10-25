@@ -2,6 +2,9 @@
 
 void	ft_strdel(char **as)
 {
-	free(*as);
-	*as = NULL;
-}//est cense free une string mais prend en entree tableau
+	if (as)
+	{
+		free(*as);
+		*as = NULL;
+	}
+}

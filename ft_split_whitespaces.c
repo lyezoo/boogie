@@ -23,7 +23,7 @@ int		count_words(char *str)
 			i++;
 		while (str[i] > ' ')
 			i++;
-		if (str[i] == ' ' || str[i] == '\0')
+		if (str[i - 1] == ' ' || str[i] == '\0')
 			words++;
 	}
 	return (words + 1);
@@ -39,7 +39,7 @@ char	**ft_split_whitespaces(char *str)
 	i = 0;
 	x = 0;
 	words = NULL;
-	if (!(words = (char **)malloc(sizeof(char) * count_words(str))))
+	if (!(words = (char **)malloc(sizeof(char) *100))) // count_words(str))))
 		return (NULL);
 	while (str[x])
 	{
@@ -48,7 +48,7 @@ char	**ft_split_whitespaces(char *str)
 			x++;
 		if (str[x])
 		{
-			if (!(words[i] = (char *)malloc(sizeof(char) * count_letter(&str[x]))))
+			if (!(words[i] = (char *)malloc(sizeof(char) *100))) // count_letter(&str[x]))))
 				return (NULL);
 			while (str[x] > ' ')
 				words[i][j++] = str[x++];

@@ -6,37 +6,28 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 18:11:22 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/21 19:17:21 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/22 19:26:31 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static int	combien(char const *s, char c)
+char		*ft_strcsub(char *s, char c)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
-char		*ft_strcsub(char const *s, char c)
-{
-	size_t	i;
 	char	*dest;
+	size_t	i;
 
-	dest = NULL;
 	i = 0;
+	dest = NULL;
 	if (!s)
 		return (NULL);
-	if (!(dest = (char *)malloc(combien(s, c) + 1)))
+	while (s[i] && s[i] != c)
+		i++;
+	if (i == ft_strlen(s))
 		return (NULL);
+	if (!(dest = (char *)malloc(i + 1)))
+		return (NULL);
+	i = 0;
 	while (s[i] != c)
 	{
 		dest[i] = s[i];

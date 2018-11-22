@@ -6,21 +6,11 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:24:50 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/20 14:29:19 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/21 17:43:15 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int		cunt(char const *str)
-{
-	int			i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {

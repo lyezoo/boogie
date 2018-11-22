@@ -6,7 +6,7 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:24:50 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/20 14:33:21 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/21 18:44:59 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,3 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	str = ft_strcat(str, s2);
 	return (str);
 }
-
-int main(int ac, char **av)
-{
-	printf("", ft_strjoin(av[1], av[2]));
- }

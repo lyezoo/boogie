@@ -1,52 +1,47 @@
-/*   getnext_line.c                                     :+:      :+:    :+:   */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 15:49:36 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/20 15:49:36 by lyhamrou         ###   ########.fr       */
+/*   Created: 2018/11/20 20:00:47 by lyhamrou          #+#    #+#             */
+/*   Updated: 2018/11/22 17:52:09 by lyhamrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../get_next_line.h"
-#include <stdio.h>
+#include "libft/libft.h"
+#include "get_next_line.h"
+
+char			*ft_strcsub(char *str, char c);
 
 int				get_next_line(const int fd, char **line)
 {
-	static char	*buf = "";
+	static char	*str = "";
 	int			ret;
-	char		*tmp;
-	int			size;
+	char		*buf;
 
 	if (fd < 0 || fd > 4864 || !line)
 		return (-1);
-	size = 0;
+	buf = str;
+	*line = str;
 	ret = 1;
-	tmp = buf;
-	*line = buf;
-	//printf("1adress of buf : %p    value of buf : %s\n\n", buf, buf);
-	//printf("adress of tmp : %p    value of tmp : %s\n", tmp, tmp);
-	while (ret > 0)//tant qu'on lit quelaue chose
+	buf = ft_memalloc(BUFF_SIZE);
+	while ((ret = (int)read(fd, buf, BUFF_SIZE)) > 0)
 	{
-		size = size + BUFF_SIZE;
-		tmp = ft_memalloc(size);
-		ret = read(fd, tmp, BUFF_SIZE);
-		tmp[BUFF_SIZE] = '\0';
-		buf = ft_strjoin(buf, tmp);
-		if (ft_strchr(buf, '\n') != NULL)
+		buf = ft_memalloc((size_t)ret + 1);
+		buf[ret] = '\0';
+		str = ft_strjoin(str, buf);
+		if (ft_strchr(str, '\n') != NULL)
 		{
-			tmp = buf;
-			buf = ft_strcsub(buf, '\n');
-			*line = buf;
-			//printf("adress of tmp : %p    value of tmp : %s\n", tmp, tmp);
-			//printf("adress of line : %p   value of line : %s\n", line, *line);
-			//printf("adress of buf : %p    value of buf : %s\n", buf, buf);
-			//buf = ft_strchr(tmp, '\n') + 1;
-			buf = tmp + ft_strlen(buf) + 1;
-			//printf("adress of buf : %p    value of buf : %s", buf, buf);
-			//ft_strdel(&tmp);
+			buf = str;
+			str = ft_strcsub(str, '\n');
+			*line = str;
+			str = buf + ft_strlen(str) + 1;
 			return (1);
 		}
-	//write(1, "-o-", 3);
 	}
-	free(tmp);
+	//free(buf);
+	//free(str);
 	return (0);
 }

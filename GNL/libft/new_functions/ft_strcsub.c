@@ -6,7 +6,7 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 18:11:22 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/20 17:17:43 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/21 19:17:21 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char		*ft_strcsub(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (!(dest = (char *)malloc(sizeof(char) * combien(s, c) + 1)))
+	if (!(dest = (char *)malloc(combien(s, c) + 1)))
 		return (NULL);
 	while (s[i] != c)
 	{

@@ -6,7 +6,7 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 19:34:10 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/20 13:33:33 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/21 18:44:47 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,4 @@ void	*ft_realloc(void *ptr, size_t size)
 		if (!(str = (char *)malloc(sizeof(char) * size)))
 			return (NULL);
 	return (NULL);
-}
-
-int main(int ac, char **av)
-{
-	ft_realloc((void *)av[1], atoi(av[2]));
-	return 0;
 }

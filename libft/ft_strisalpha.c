@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_strisalpha.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: arlaine <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 19:54:34 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/15 20:47:32 by lyhamrou         ###   ########.fr       */
+/*   Created: 2018/12/07 19:22:35 by arlaine           #+#    #+#             */
+/*   Updated: 2018/12/07 19:26:07 by arlaine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+int		ft_strisalpha(char *str)
 {
-	if (new)
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		new->next = (*alst);
-		*alst = new;
+		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
+			return (0);
+		i++;
 	}
+	return (1);
 }

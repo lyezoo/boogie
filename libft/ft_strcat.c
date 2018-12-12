@@ -6,21 +6,20 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:31:45 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/12 23:39:53 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/28 02:34:12 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strcat(char *dest, char const *src)
 {
-	int	i;
+	char *tmp;
 
-	i = ft_strlen(src) + ft_strlen(dest);
-	while (*dest)
-		dest++;
+	tmp = dest;
+	tmp = tmp + ft_strlen(dest);
 	while (*src)
-		*(dest)++ = *(src)++;
-	*dest = '\0';
-	return (&dest[-i]);
+		*tmp++ = *src++;
+	*tmp = '\0';
+	return (dest);
 }

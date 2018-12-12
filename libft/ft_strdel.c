@@ -6,11 +6,11 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:31:13 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/12 20:31:16 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/29 01:09:49 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_strdel(char **as)
 {

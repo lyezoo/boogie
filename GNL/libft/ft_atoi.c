@@ -6,11 +6,11 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:55:30 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/16 00:22:20 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/11/27 23:55:14 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_atoi(char const *str)
 {

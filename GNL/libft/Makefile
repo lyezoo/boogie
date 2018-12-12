@@ -6,7 +6,7 @@
 #    By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 23:51:25 by lyhamrou          #+#    #+#              #
-#    Updated: 2018/11/16 00:25:46 by lyhamrou         ###   ########.fr        #
+#    Updated: 2018/12/12 17:44:05 by lyhamrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c\
 ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c\
 ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c\
 ft_lstmap.c ft_lstiter.c ft_strrev.c ft_strndup.c ft_sqrt.c\
-ft_recursive_power.c
+ft_recursive_power.c ft_realloc.c
 
 OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o\
 ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o\
@@ -36,17 +36,18 @@ ft_strmapi.o ft_strncat.o ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o\
 ft_strnstr.o ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o\
 ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd.o ft_lstdel.o ft_lstdelone.o\
 ft_lstmap.o ft_lstiter.o ft_strrev.o ft_strndup.o ft_sqrt.o\
-ft_recursive_power.o
+ft_recursive_power.o ft_realloc.o
 
-HEADER = libft.h
+HEADER = includes/libft.h
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = gcc
+#CC = gcc
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
+	@gcc $(CFLAGS) -c $(SRCS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 

@@ -6,11 +6,11 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:51:40 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/12 20:38:30 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/12/12 14:45:30 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 static int		howmany_num(int n)
 {
@@ -40,7 +40,7 @@ char			*ft_itoa(int n)
 
 	nb = n;
 	pow = howmany_num(n);
-	if (!(itoa = (char *)malloc(sizeof(char) * pow + 1)))
+	if (!(itoa = (char *)malloc(sizeof(char) * (unsigned long)pow + 1)))
 		return (NULL);
 	itoa[pow--] = '\0';
 	if (nb < 0)

@@ -6,11 +6,11 @@
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:36:35 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/11/16 02:35:29 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/12/12 14:54:18 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	*ft_memccpy(void *dest, void const *src, int c, size_t n)
 {
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dest, void const *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (s[i] == (unsigned char)c)
-			return ((void *)dest + i + 1);
+			return (d + i + 1);
 		i++;
 	}
 	return (NULL);

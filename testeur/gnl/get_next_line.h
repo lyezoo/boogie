@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyhamrou <lyhamrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:31:58 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/12/19 18:57:50 by lyhamrou         ###   ########.fr       */
+/*   Created: 2018/11/16 20:01:59 by lyhamrou          #+#    #+#             */
+/*   Updated: 2018/12/20 18:11:58 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char		*ft_strchr(char const *s, int c)
-{
-	return (ft_memchr(s, c, ft_strlen(s) + 1));
-}
+# include "libft.h"
+# include <stdlib.h>
+# include <stdio.h>
+
+# define BUFF_SIZE 100
+
+int		get_next_line(const int fd, char **line);
+
+#endif

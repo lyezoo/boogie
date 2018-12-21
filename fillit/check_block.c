@@ -6,7 +6,7 @@
 /*   By: lyhamrou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 15:11:23 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/12/20 15:33:25 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/12/21 15:16:16 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int		main(int ac, char **av)
 
 	block = NULL;
 	block3d = NULL;
-	if ((fd = open(av[1], O_RDONLY)) < 0)
+	if ((fd = open(av[1], O_RDONLY)) < 0 && ac == 2)
 		ft_error(block);
 	if (ac != 2)
 		ft_usage(ac, block);
@@ -122,7 +122,7 @@ int		main(int ac, char **av)
 		close(fd);
 		fd = get_map_size(i);
 		block = create_map(fd);
-		loop_n_clean(block, block3d, i, fd);
+		ft_loop_clean(block, block3d, i, fd);
 	}
 	return (0);
 }

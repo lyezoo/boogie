@@ -6,7 +6,7 @@
 /*   By: lyhamrou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 18:16:15 by lyhamrou          #+#    #+#             */
-/*   Updated: 2018/12/21 00:26:24 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/12/21 15:17:12 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	***delete_first_line(char ***bloc)
 	return (bloc);
 }
 
-void	loop_n_clean(char **block, char ***block3d, int i, int fd)
+void	ft_loop_clean(char **block, char ***block3d, int i, int fd)
 {
 	while (!(solver2(block3d, block, i)))
 	{

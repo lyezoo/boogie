@@ -6,7 +6,7 @@
 /*   By: arlaine <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 15:58:05 by arlaine           #+#    #+#             */
-/*   Updated: 2018/12/21 00:26:48 by lyhamrou         ###   ########.fr       */
+/*   Updated: 2018/12/21 14:55:06 by lyhamrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		is_it_possible_to_put_bloc(char **map, char **bloc, int x, int y);
 int		placeable(char **bloc, char **map, int x, int y);
 char	last_tet(char **map);
 void	print_result(char **map);
-void	loop_n_clean(char **block, char ***block3d, int i, int fd);
+void	ft_loop_clean(char **block, char ***block3d, int i, int fd);
 void	free_pointer(char **bloc);
 char	**free_pointer_n(char **bloc);
 void	free_other_pointer(char ***block, char **bloc);

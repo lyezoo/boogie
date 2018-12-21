@@ -6,7 +6,7 @@
 #    By: arlaine <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 15:43:45 by arlaine           #+#    #+#              #
-#    Updated: 2018/12/21 00:24:49 by lyhamrou         ###   ########.fr        #
+#    Updated: 2018/12/21 15:28:52 by lyhamrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,13 +19,17 @@ SRC = check_block.c cut_blocks.c print.c create_map.c resolve.c free_var.c \
 
 OBJ = $(SRC:.c=.o)
 
+CC = gcc
+
+HEADER = fillit.h
+
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@gcc -c $(SRC)
-	@gcc -o $(NAME) $(OBJ)
+	@$(CC) -c $(SRC) -I $(HEADER)
+	@$(CC) -o $(NAME) $(OBJ)
 
 clean:
 	@rm -rf $(OBJ)
